@@ -1,0 +1,1 @@
+This is a little project that will analyze and correlate data from a year's worth of photos with all sorts of other things to glean fun insights that I will eventually draw out and present on a postcard, Dear Data style!
