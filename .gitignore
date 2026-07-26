@@ -7,3 +7,4 @@ scripts/vision_feature_extraction/logs/
 scripts/gfit_extraction/logs/
 /.venv/
 __pycache__/
+/datasets/test_*
