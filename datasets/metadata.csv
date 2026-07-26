@@ -1,0 +1,306 @@
+filename,media_type,date_taken,date_source,day_of_week,month,week_of_year,time_of_day,time_of_day_category,camera_make,camera_model,orientation
+IMG_20231104_160622.jpg,photo,2023-11-04T23:06:22+00:00,google_photos_api,Saturday,November,44,11pm,night,N/A,N/A,landscape
+IMG_20240602_224142.jpg,photo,2024-06-03T05:41:42+00:00,google_photos_api,Monday,June,23,5am,night,N/A,N/A,portrait
+IMG_20240603_224251.jpg,photo,2024-06-04T05:42:52+00:00,google_photos_api,Tuesday,June,23,5am,night,N/A,N/A,landscape
+PXL_20250420_020645524.MP.jpg,photo,2025-04-20T02:06:45.524000+00:00,google_photos_api,Sunday,April,16,2am,night,Google,Pixel 7,portrait
+IMG-20250523-WA0006.jpg,photo,2025-05-24T04:05:18+00:00,google_photos_api,Saturday,May,21,4am,night,N/A,N/A,portrait
+IMG_20250220_080225.heic,photo,2025-02-20T04:46:30.856000+00:00,google_photos_api,Thursday,February,8,4am,night,Apple,iPhone 14,landscape
+IMG_20240418_231228.jpg,photo,2024-04-19T06:12:28+00:00,google_photos_api,Friday,April,16,6am,morning,N/A,N/A,portrait
+IMG_20240418_231225.jpg,photo,2024-04-19T06:12:25+00:00,google_photos_api,Friday,April,16,6am,morning,N/A,N/A,portrait
+IMG_20240418_231221.jpg,photo,2024-04-19T06:12:22+00:00,google_photos_api,Friday,April,16,6am,morning,N/A,N/A,portrait
+IMG_20240418_231217.jpg,photo,2024-04-19T06:12:17+00:00,google_photos_api,Friday,April,16,6am,morning,N/A,N/A,portrait
+IMG_20240418_231213.jpg,photo,2024-04-19T06:12:13+00:00,google_photos_api,Friday,April,16,6am,morning,N/A,N/A,portrait
+IMG_9425.jpg,photo,2023-11-28T07:30:21+00:00,google_photos_api,Tuesday,November,48,7am,morning,N/A,N/A,landscape
+Screenshot_20250304-083511.png,photo,2025-03-04T16:35:17+00:00,google_photos_api,Tuesday,March,10,4pm,late afternoon,N/A,N/A,portrait
+IMG-20250616-WA0000.jpg,photo,2025-06-16T07:29:13+00:00,google_photos_api,Monday,June,25,7am,morning,N/A,N/A,landscape
+Screenshot_20250624-235218~2.png,photo,2025-06-25T06:53:05+00:00,google_photos_api,Wednesday,June,26,6am,morning,N/A,N/A,landscape
+IMG-20250722-WA0009.jpg,photo,2025-07-23T01:44:16+00:00,google_photos_api,Wednesday,July,30,1am,night,N/A,N/A,portrait
+IMG_20240418_225739.jpg,photo,2024-04-19T05:57:40+00:00,google_photos_api,Friday,April,16,5am,night,N/A,N/A,portrait
+IMG-20250815-WA0041.jpg,photo,2025-08-16T02:38:54+00:00,google_photos_api,Saturday,August,33,2am,night,N/A,N/A,portrait
+PXL_20250828_041543150.jpg,photo,2025-08-28T04:15:43.150000+00:00,google_photos_api,Thursday,August,35,4am,night,Google,Pixel 7,portrait
+received_1872197956661620.jpeg,photo,2025-09-27T03:11:20+00:00,google_photos_api,Saturday,September,39,3am,night,N/A,N/A,portrait
+received_1305994644645848.jpeg,photo,2025-09-27T03:11:21+00:00,google_photos_api,Saturday,September,39,3am,night,N/A,N/A,portrait
+received_3257722264394798.jpeg,photo,2025-09-27T03:11:26+00:00,google_photos_api,Saturday,September,39,3am,night,N/A,N/A,landscape
+IMG-20250926-WA0030.jpg,photo,2025-09-27T02:03:34+00:00,google_photos_api,Saturday,September,39,2am,night,N/A,N/A,portrait
+PXL_20250929_015546575.MP.jpg,photo,2025-09-29T01:55:46.575000+00:00,google_photos_api,Monday,September,40,1am,night,Google,Pixel 7,portrait
+PXL_20250929_011632184.MP.jpg,photo,2025-09-29T01:16:32.184000+00:00,google_photos_api,Monday,September,40,1am,night,Google,Pixel 7,portrait
+IMG-20250928-WA0010.jpg,photo,2025-09-29T06:28:55+00:00,google_photos_api,Monday,September,40,6am,morning,N/A,N/A,portrait
+IMG-20250928-WA0009.jpg,photo,2025-09-29T06:28:53+00:00,google_photos_api,Monday,September,40,6am,morning,N/A,N/A,portrait
+VID-20250928-WA0011.mp4,video,2025-09-29T06:29:17+00:00,google_photos_api,Monday,September,40,6am,morning,N/A,N/A,N/A
+Screenshot_20251023-143308.png,photo,2025-10-23T21:33:08.874000+00:00,google_photos_api,Thursday,October,43,9pm,night,N/A,N/A,portrait
+Screenshot_20251023-135353.png,photo,2025-10-23T20:54:06+00:00,google_photos_api,Thursday,October,43,8pm,evening,N/A,N/A,portrait
+PXL_20251025_052254422.MP.jpg,photo,2025-10-25T05:22:54.422000+00:00,google_photos_api,Saturday,October,43,5am,night,Google,Pixel 7,portrait
+PXL_20251025_052301858.TS.mp4,video,2025-10-25T05:27:06+00:00,google_photos_api,Saturday,October,43,5am,night,N/A,N/A,N/A
+IMG_20251026_165635_164.jpg,photo,2025-10-26T23:56:35+00:00,google_photos_api,Sunday,October,43,11pm,night,N/A,N/A,portrait
+IMG-20251026-WA0040.jpg,photo,2025-10-26T23:44:27+00:00,google_photos_api,Sunday,October,43,11pm,night,N/A,N/A,portrait
+PXL_20251101_060813655.MP.jpg,photo,2025-11-01T06:08:13.655000+00:00,google_photos_api,Saturday,November,44,6am,morning,Google,Pixel 7,landscape
+PXL_20251101_060810706.jpg,photo,2025-11-01T06:08:10.706000+00:00,google_photos_api,Saturday,November,44,6am,morning,Google,Pixel 7,landscape
+PXL_20251101_055618422.jpg,photo,2025-11-01T05:56:18.422000+00:00,google_photos_api,Saturday,November,44,5am,night,Google,Pixel 7,portrait
+PXL_20251101_055619106.jpg,photo,2025-11-01T05:56:19.106000+00:00,google_photos_api,Saturday,November,44,5am,night,Google,Pixel 7,portrait
+PXL_20251101_055616540.MP.jpg,photo,2025-11-01T05:56:16.540000+00:00,google_photos_api,Saturday,November,44,5am,night,Google,Pixel 7,portrait
+PXL_20251101_055617697.jpg,photo,2025-11-01T05:56:17.697000+00:00,google_photos_api,Saturday,November,44,5am,night,Google,Pixel 7,portrait
+tvt5SnwTbGoukRylKk1X.jpg,photo,2025-11-10T08:08:33+00:00,google_photos_api,Monday,November,46,8am,morning,N/A,N/A,landscape
+hlfEcSp7UHaVA8wr0Gi6.jpg,photo,2025-11-10T08:10:43+00:00,google_photos_api,Monday,November,46,8am,morning,N/A,N/A,landscape
+IMG-20251110-WA0007.jpg,photo,2025-11-10T08:16:41+00:00,google_photos_api,Monday,November,46,8am,morning,N/A,N/A,landscape
+PXL_20251115_061246900.TS.mp4,video,2025-11-15T06:19:42+00:00,google_photos_api,Saturday,November,46,6am,morning,N/A,N/A,N/A
+PXL_20251115_223941769.jpg,photo,2025-11-15T22:39:41.769000+00:00,google_photos_api,Saturday,November,46,10pm,night,Google,Pixel 7,landscape
+Screenshot_20251119-085901.png,photo,2025-11-19T16:59:01.647000+00:00,google_photos_api,Wednesday,November,47,4pm,late afternoon,N/A,N/A,portrait
+Screenshot_20251119-085847.png,photo,2025-11-19T16:58:47.896000+00:00,google_photos_api,Wednesday,November,47,4pm,late afternoon,N/A,N/A,portrait
+PXL_20251120_054700569.TS.mp4,video,2025-11-20T05:47:20+00:00,google_photos_api,Thursday,November,47,5am,night,N/A,N/A,N/A
+PXL_20251122_001809328.jpg,photo,2025-11-22T00:18:09.328000+00:00,google_photos_api,Saturday,November,47,12am,night,Google,Pixel 7,portrait
+PXL_20251122_001818180.TS.mp4,video,2025-11-22T00:18:46+00:00,google_photos_api,Saturday,November,47,12am,night,N/A,N/A,N/A
+PXL_20251127_004503968.MP.jpg,photo,2025-11-27T00:45:03.968000+00:00,google_photos_api,Thursday,November,48,12am,night,Google,Pixel 7,portrait
+PXL_20251128_044922153.jpg,photo,2025-11-28T04:49:22.153000+00:00,google_photos_api,Friday,November,48,4am,night,Google,Pixel 7,portrait
+PXL_20251129_003021979.jpg,photo,2025-11-29T00:30:21.979000+00:00,google_photos_api,Saturday,November,48,12am,night,Google,Pixel 7,portrait
+PXL_20251129_015349719.jpg,photo,2025-11-29T01:53:49.719000+00:00,google_photos_api,Saturday,November,48,1am,night,Google,Pixel 7,portrait
+PXL_20251129_050443163.jpg,photo,2025-11-29T05:04:43.163000+00:00,google_photos_api,Saturday,November,48,5am,night,Google,Pixel 7,portrait
+PXL_20251129_052326364.MP.jpg,photo,2025-11-29T05:23:26.364000+00:00,google_photos_api,Saturday,November,48,5am,night,Google,Pixel 7,portrait
+PXL_20251129_234302584.jpg,photo,2025-11-29T23:43:02.584000+00:00,google_photos_api,Saturday,November,48,11pm,night,Google,Pixel 7,portrait
+PXL_20251129_234303758.jpg,photo,2025-11-29T23:43:03.758000+00:00,google_photos_api,Saturday,November,48,11pm,night,Google,Pixel 7,portrait
+PXL_20251130_190028339.jpg,photo,2025-11-30T19:00:28.339000+00:00,google_photos_api,Sunday,November,48,7pm,evening,Google,Pixel 7,portrait
+VID-20251128-WA0033.mp4,video,2025-11-29T05:37:26+00:00,google_photos_api,Saturday,November,48,5am,night,N/A,N/A,N/A
+VID-20251128-WA0032.mp4,video,2025-11-29T05:37:18+00:00,google_photos_api,Saturday,November,48,5am,night,N/A,N/A,N/A
+IMG-20251204-WA0027.jpg,photo,2025-12-05T01:26:32+00:00,google_photos_api,Friday,December,49,1am,night,N/A,N/A,portrait
+PXL_20251206_040314052.jpg,photo,2025-12-06T04:03:14.052000+00:00,google_photos_api,Saturday,December,49,4am,night,Google,Pixel 7,portrait
+PXL_20251206_040304737.jpg,photo,2025-12-06T04:03:04.737000+00:00,google_photos_api,Saturday,December,49,4am,night,Google,Pixel 7,portrait
+PXL_20251206_165857037.jpg,photo,2025-12-06T16:58:57.037000+00:00,google_photos_api,Saturday,December,49,4pm,late afternoon,Google,Pixel 7,portrait
+1000020589.jpeg,photo,2025-12-08T01:19:06.013000+00:00,google_photos_api,Monday,December,50,1am,night,N/A,N/A,portrait
+1000020565.jpeg,photo,2025-12-08T01:18:29.206000+00:00,google_photos_api,Monday,December,50,1am,night,N/A,N/A,landscape
+IMG_20260116_153327958.jpg,photo,2026-01-16T23:33:28.954000+00:00,google_photos_api,Friday,January,3,11pm,night,motorola,moto g - 2025,landscape
+VID_20260116_161104182.mp4,video,2026-01-17T00:12:23+00:00,google_photos_api,Saturday,January,3,12am,night,N/A,N/A,N/A
+IMG_20260117_100516337_HDR.jpg,photo,2026-01-17T18:05:17.815000+00:00,google_photos_api,Saturday,January,3,6pm,evening,motorola,moto g - 2025,landscape
+VID_20260117_111833020.mp4,video,2026-01-17T19:23:03+00:00,google_photos_api,Saturday,January,3,7pm,evening,N/A,N/A,N/A
+IMG_20260117_123333300.jpg,photo,2026-01-17T20:33:34.043000+00:00,google_photos_api,Saturday,January,3,8pm,evening,motorola,moto g - 2025,portrait
+IMG_20260117_170746178.jpg,photo,2026-01-18T01:07:46.518000+00:00,google_photos_api,Sunday,January,3,1am,night,motorola,moto g - 2025,landscape
+VID_20260117_170749407.mp4,video,2026-01-18T01:08:00+00:00,google_photos_api,Sunday,January,3,1am,night,N/A,N/A,N/A
+VID_20260119_143229158.mp4,video,2026-01-19T22:32:50+00:00,google_photos_api,Monday,January,4,10pm,night,N/A,N/A,N/A
+IMG-20260119-WA0048.jpg,photo,2026-01-19T18:06:45+00:00,google_photos_api,Monday,January,4,6pm,evening,N/A,N/A,portrait
+IMG-20260119-WA0044.jpg,photo,2026-01-19T18:06:41+00:00,google_photos_api,Monday,January,4,6pm,evening,N/A,N/A,portrait
+IMG-20260119-WA0046.jpg,photo,2026-01-19T18:06:43+00:00,google_photos_api,Monday,January,4,6pm,evening,N/A,N/A,portrait
+IMG-20260119-WA0042.jpg,photo,2026-01-19T18:06:39+00:00,google_photos_api,Monday,January,4,6pm,evening,N/A,N/A,portrait
+IMG-20260119-WA0040.jpg,photo,2026-01-19T18:06:36+00:00,google_photos_api,Monday,January,4,6pm,evening,N/A,N/A,portrait
+IMG-20260119-WA0038.jpg,photo,2026-01-19T18:06:34+00:00,google_photos_api,Monday,January,4,6pm,evening,N/A,N/A,portrait
+IMG-20260119-WA0034.jpg,photo,2026-01-19T18:06:30+00:00,google_photos_api,Monday,January,4,6pm,evening,N/A,N/A,portrait
+IMG-20260119-WA0036.jpg,photo,2026-01-19T18:06:32+00:00,google_photos_api,Monday,January,4,6pm,evening,N/A,N/A,portrait
+IMG-20260119-WA0032.jpg,photo,2026-01-19T18:06:28+00:00,google_photos_api,Monday,January,4,6pm,evening,N/A,N/A,portrait
+IMG-20260119-WA0030.jpg,photo,2026-01-19T18:04:53+00:00,google_photos_api,Monday,January,4,6pm,evening,N/A,N/A,portrait
+IMG-20260119-WA0028.jpg,photo,2026-01-19T18:03:45+00:00,google_photos_api,Monday,January,4,6pm,evening,N/A,N/A,portrait
+IMG-20260119-WA0026.jpg,photo,2026-01-19T18:03:43+00:00,google_photos_api,Monday,January,4,6pm,evening,N/A,N/A,portrait
+IMG-20260119-WA0020.jpg,photo,2026-01-19T18:03:37+00:00,google_photos_api,Monday,January,4,6pm,evening,N/A,N/A,portrait
+IMG-20260119-WA0024.jpg,photo,2026-01-19T18:03:41+00:00,google_photos_api,Monday,January,4,6pm,evening,N/A,N/A,portrait
+IMG-20260119-WA0022.jpg,photo,2026-01-19T18:03:39+00:00,google_photos_api,Monday,January,4,6pm,evening,N/A,N/A,portrait
+IMG-20260119-WA0018.jpg,photo,2026-01-19T18:03:34+00:00,google_photos_api,Monday,January,4,6pm,evening,N/A,N/A,portrait
+IMG-20260118-WA0017.jpg,photo,2026-01-19T18:03:34+00:00,google_photos_api,Monday,January,4,6pm,evening,N/A,N/A,portrait
+IMG-20260118-WA0015.jpg,photo,2026-01-19T18:03:25+00:00,google_photos_api,Monday,January,4,6pm,evening,N/A,N/A,portrait
+IMG-20260118-WA0013.jpg,photo,2026-01-19T18:03:24+00:00,google_photos_api,Monday,January,4,6pm,evening,N/A,N/A,portrait
+IMG-20260118-WA0011.jpg,photo,2026-01-19T18:03:22+00:00,google_photos_api,Monday,January,4,6pm,evening,N/A,N/A,portrait
+VID_20260125_103139957.mp4,video,2026-01-25T18:32:41+00:00,google_photos_api,Sunday,January,4,6pm,evening,N/A,N/A,N/A
+IMG_20260208_130931826_HDR.jpg,photo,2026-02-08T21:09:32.495000+00:00,google_photos_api,Sunday,February,6,9pm,night,motorola,moto g - 2025,landscape
+IMG_20260208_135838460_HDR.jpg,photo,2026-02-08T21:58:39.464000+00:00,google_photos_api,Sunday,February,6,9pm,night,motorola,moto g - 2025,landscape
+IMG_20260208_135851855_HDR.jpg,photo,2026-02-08T21:58:52.569000+00:00,google_photos_api,Sunday,February,6,9pm,night,motorola,moto g - 2025,landscape
+IMG_20260208_140010644_HDR.jpg,photo,2026-02-08T22:00:11.222000+00:00,google_photos_api,Sunday,February,6,10pm,night,motorola,moto g - 2025,landscape
+IMG_20260208_140932680_HDR.jpg,photo,2026-02-08T22:09:33.556000+00:00,google_photos_api,Sunday,February,6,10pm,night,motorola,moto g - 2025,landscape
+IMG_20260209_081804732.jpg,photo,2026-02-09T16:18:05.644000+00:00,google_photos_api,Monday,February,7,4pm,late afternoon,motorola,moto g - 2025,landscape
+IMG_20260209_090736797_HDR.jpg,photo,2026-02-09T17:07:37.752000+00:00,google_photos_api,Monday,February,7,5pm,late afternoon,motorola,moto g - 2025,portrait
+IMG_20260209_164559961_HDR.jpg,photo,2026-02-10T00:46:00.684000+00:00,google_photos_api,Tuesday,February,7,12am,night,motorola,moto g - 2025,landscape
+IMG_20260212_213507700.jpg,photo,2026-02-13T05:35:08.312000+00:00,google_photos_api,Friday,February,7,5am,night,motorola,moto g - 2025,landscape
+IMG_20260214_154529171.jpg,photo,2026-02-14T23:45:29.834000+00:00,google_photos_api,Saturday,February,7,11pm,night,motorola,moto g - 2025,landscape
+IMG_20260214_152530485.jpg,photo,2026-02-14T23:25:30.998000+00:00,google_photos_api,Saturday,February,7,11pm,night,motorola,moto g - 2025,landscape
+IMG_20260214_081755276.jpg,photo,2026-02-14T16:17:55.901000+00:00,google_photos_api,Saturday,February,7,4pm,late afternoon,motorola,moto g - 2025,landscape
+IMG_20260214_081752607_HDR.jpg,photo,2026-02-14T16:17:53.315000+00:00,google_photos_api,Saturday,February,7,4pm,late afternoon,motorola,moto g - 2025,landscape
+IMG_20260213_145124905_HDR.jpg,photo,2026-02-13T22:51:26.081000+00:00,google_photos_api,Friday,February,7,10pm,night,motorola,moto g - 2025,landscape
+IMG_20260213_120828884.jpg,photo,2026-02-13T20:08:29.838000+00:00,google_photos_api,Friday,February,7,8pm,evening,motorola,moto g - 2025,landscape
+IMG_20260213_110245332_HDR.jpg,photo,2026-02-13T19:02:45.656000+00:00,google_photos_api,Friday,February,7,7pm,evening,motorola,moto g - 2025,landscape
+IMG_20260214_192000323.jpg,photo,2026-02-15T03:20:01.526000+00:00,google_photos_api,Sunday,February,7,3am,night,motorola,moto g - 2025,landscape
+IMG_20260214_192719632.jpg,photo,2026-02-15T03:27:20.470000+00:00,google_photos_api,Sunday,February,7,3am,night,motorola,moto g - 2025,landscape
+IMG_20260314_095838775_HDR.jpg,photo,2026-03-14T16:58:39.520000+00:00,google_photos_api,Saturday,March,11,4pm,late afternoon,motorola,moto g - 2025,landscape
+original_08cc9732-6508-49ac-9678-1eb1d7254381_IMG_20260317_190230931.jpg,photo,2026-03-18T02:02:31.304000+00:00,google_photos_api,Wednesday,March,12,2am,night,motorola,moto g - 2025,portrait
+IMG_20260317_193435889_HDR.jpg,photo,2026-03-18T02:34:36.497000+00:00,google_photos_api,Wednesday,March,12,2am,night,motorola,moto g - 2025,landscape
+original_7c106259-9b5d-4e7a-9369-7fb5ecef6dff_IMG_20260317_190229188.jpg,photo,2026-03-18T02:02:29.805000+00:00,google_photos_api,Wednesday,March,12,2am,night,motorola,moto g - 2025,portrait
+IMG_20260317_184248158.jpg,photo,2026-03-18T01:42:49.010000+00:00,google_photos_api,Wednesday,March,12,1am,night,motorola,moto g - 2025,landscape
+VID_20260317_193440695.mp4,video,2026-03-18T02:34:53+00:00,google_photos_api,Wednesday,March,12,2am,night,N/A,N/A,N/A
+20260318_165824-COLLAGE.jpg,photo,2026-03-18T23:58:24+00:00,google_photos_api,Wednesday,March,12,11pm,night,N/A,N/A,landscape
+IMG_20260320_124640115_HDR.jpg,photo,2026-03-20T19:46:41.328000+00:00,google_photos_api,Friday,March,12,7pm,evening,motorola,moto g - 2025,landscape
+20260321_214355.jpg,photo,2026-03-22T04:43:56.064000+00:00,google_photos_api,Sunday,March,12,4am,night,samsung,Galaxy S23+,landscape
+IMG-20260425-WA0013.jpg,photo,2026-04-25T20:15:04+00:00,google_photos_api,Saturday,April,17,8pm,evening,N/A,N/A,portrait
+IMG_20260503_110925477_HDR.jpg,photo,2026-05-03T18:09:25.893000+00:00,google_photos_api,Sunday,May,18,6pm,evening,motorola,moto g - 2025,portrait
+IMG_20260505_202539483.jpg,photo,2026-05-06T03:25:40.646000+00:00,google_photos_api,Wednesday,May,19,3am,night,motorola,moto g - 2025,landscape
+IMG_20260507_213719049_HDR.jpg,photo,2026-05-08T04:37:19.812000+00:00,google_photos_api,Friday,May,19,4am,night,motorola,moto g - 2025,landscape
+IMG_20260508_100802608_HDR.jpg,photo,2026-05-08T17:08:03.366000+00:00,google_photos_api,Friday,May,19,5pm,late afternoon,motorola,moto g - 2025,landscape
+IMG_20260509_192957257_HDR.jpg,photo,2026-05-10T02:29:58.703000+00:00,google_photos_api,Sunday,May,19,2am,night,motorola,moto g - 2025,landscape
+IMG_20260509_152331064_HDR.jpg,photo,2026-05-09T22:23:31.757000+00:00,google_photos_api,Saturday,May,19,10pm,night,motorola,moto g - 2025,landscape
+IMG_20260510_105943321_HDR.jpg,photo,2026-05-10T17:59:43.913000+00:00,google_photos_api,Sunday,May,19,5pm,late afternoon,motorola,moto g - 2025,landscape
+IMG_20260510_182755.jpg,photo,2026-05-11T01:14:57.710000+00:00,google_photos_api,Monday,May,20,1am,night,Apple,iPhone 15 Pro Max,landscape
+IMG-20260517-WA0002.jpg,photo,2026-05-17T19:40:30+00:00,google_photos_api,Sunday,May,20,7pm,evening,N/A,N/A,portrait
+Screenshot_20260531-155531_Instagram.png,photo,2026-05-31T22:55:31.825000+00:00,google_photos_api,Sunday,May,22,10pm,night,N/A,N/A,portrait
+VID-20260531-WA0024.mp4,video,2026-06-01T01:17:02+00:00,google_photos_api,Monday,June,23,1am,night,N/A,N/A,N/A
+VID-20260531-WA0012.mp4,video,2026-05-31T20:55:49+00:00,google_photos_api,Sunday,May,22,8pm,evening,N/A,N/A,N/A
+VID-20260531-WA0009.mp4,video,2026-05-31T20:49:08+00:00,google_photos_api,Sunday,May,22,8pm,evening,N/A,N/A,N/A
+VID-20260531-WA0008.mp4,video,2026-05-31T20:49:08+00:00,google_photos_api,Sunday,May,22,8pm,evening,N/A,N/A,N/A
+IMG_20260531_150126571_HDR.jpg,photo,2026-05-31T22:01:27.127000+00:00,google_photos_api,Sunday,May,22,10pm,night,motorola,moto g - 2025,landscape
+IMG_20260531_135455519.jpg,photo,2026-05-31T20:54:56.413000+00:00,google_photos_api,Sunday,May,22,8pm,evening,motorola,moto g - 2025,landscape
+IMG_20260621_155552453_HDR.jpg,photo,2026-06-21T22:55:53.777000+00:00,google_photos_api,Sunday,June,25,10pm,night,motorola,moto g - 2025,landscape
+IMG_20260621_150434135.jpg,photo,2026-06-21T22:04:34.568000+00:00,google_photos_api,Sunday,June,25,10pm,night,motorola,moto g - 2025,landscape
+IMG_20260621_150432245_HDR.jpg,photo,2026-06-21T22:04:33.133000+00:00,google_photos_api,Sunday,June,25,10pm,night,motorola,moto g - 2025,landscape
+IMG_20260621_135408171_HDR.jpg,photo,2026-06-21T20:54:08.675000+00:00,google_photos_api,Sunday,June,25,8pm,evening,motorola,moto g - 2025,landscape
+IMG_20260626_223715146_HDR.jpg,photo,2026-06-27T05:37:15.550000+00:00,google_photos_api,Saturday,June,26,5am,night,motorola,moto g - 2025,landscape
+VID_20260626_234953304.mp4,video,2026-06-27T06:50:07+00:00,google_photos_api,Saturday,June,26,6am,morning,N/A,N/A,N/A
+IMG_20260627_125128752_HDR.jpg,photo,2026-06-27T19:51:29.328000+00:00,google_photos_api,Saturday,June,26,7pm,evening,motorola,moto g - 2025,landscape
+IMG_20260627_203926821.jpg,photo,2026-06-28T03:39:27.781000+00:00,google_photos_api,Sunday,June,26,3am,night,motorola,moto g - 2025,landscape
+IMG_20260627_185436569_HDR.jpg,photo,2026-06-28T01:54:37.320000+00:00,google_photos_api,Sunday,June,26,1am,night,motorola,moto g - 2025,landscape
+IMG_20260627_152235475_HDR.jpg,photo,2026-06-27T22:22:36.005000+00:00,google_photos_api,Saturday,June,26,10pm,night,motorola,moto g - 2025,landscape
+IMG_20260628_154013.jpg,photo,2026-06-28T22:06:37.843000+00:00,google_photos_api,Sunday,June,26,10pm,night,Apple,iPhone 15 Pro Max,landscape
+IMG_20260628_225919.heic,photo,2026-06-27T05:05:28.008000+00:00,google_photos_api,Saturday,June,26,5am,night,Apple,iPhone 14 Pro Max,landscape
+IMG_20260628_225911.heic,photo,2026-06-27T05:05:08.465000+00:00,google_photos_api,Saturday,June,26,5am,night,Apple,iPhone 14 Pro Max,landscape
+IMG_20260628_225916.heic,photo,2026-06-27T05:05:22.808000+00:00,google_photos_api,Saturday,June,26,5am,night,Apple,iPhone 14 Pro Max,landscape
+IMG-20260627-WA0005.jpg,photo,2026-06-27T11:54:32+00:00,google_photos_api,Saturday,June,26,11am,morning,N/A,N/A,landscape
+IMG-20260624-WA0004.jpeg,photo,2026-06-25T01:55:14.968000+00:00,google_photos_api,Thursday,June,26,1am,night,motorola,moto g - 2025,landscape
+IMG-20260625-WA0009.jpg,photo,2026-06-25T16:34:42+00:00,google_photos_api,Thursday,June,26,4pm,late afternoon,N/A,N/A,portrait
+IMG_20260716_190721493.jpg,photo,2026-07-17T02:07:22.288000+00:00,google_photos_api,Friday,July,29,2am,night,motorola,moto g - 2025,landscape
+IMG_0123.HEIC,photo,2026-05-24T03:22:58.018000+00:00,google_photos_api,Sunday,May,21,3am,night,Apple,iPhone 15 Pro,landscape
+IMG_8534.HEIC,photo,2026-02-14T20:33:49.453000+00:00,google_photos_api,Saturday,February,7,8pm,evening,Apple,iPhone 15 Pro,portrait
+IMG_0169.HEIC,photo,2026-05-29T05:15:04.780000+00:00,google_photos_api,Friday,May,22,5am,night,Apple,iPhone 15 Pro,portrait
+IMG_0184.HEIC,photo,2026-05-30T05:31:56.252000+00:00,google_photos_api,Saturday,May,22,5am,night,Apple,iPhone 15 Pro,landscape
+IMG_0309.HEIC,photo,2026-06-07T04:51:59.971000+00:00,google_photos_api,Sunday,June,23,4am,night,Apple,iPhone 15 Pro,landscape
+IMG_0215.HEIC,photo,2026-05-31T21:35:30.381000+00:00,google_photos_api,Sunday,May,22,9pm,night,Apple,iPhone 15 Pro,portrait
+IMG_0222.HEIC,photo,2026-05-31T21:37:06.930000+00:00,google_photos_api,Sunday,May,22,9pm,night,Apple,iPhone 15 Pro,portrait
+IMG_0302.HEIC,photo,2026-06-07T04:51:43.470000+00:00,google_photos_api,Sunday,June,23,4am,night,Apple,iPhone 15 Pro,portrait
+IMG_8931.MOV,video,2026-03-01T00:07:49+00:00,google_photos_api,Sunday,March,9,12am,night,N/A,N/A,N/A
+IMG_0214.HEIC,photo,2026-05-31T21:35:18.034000+00:00,google_photos_api,Sunday,May,22,9pm,night,Apple,iPhone 15 Pro,portrait
+IMG_0548.HEIC,photo,2026-06-21T23:00:44.449000+00:00,google_photos_api,Sunday,June,25,11pm,night,Apple,iPhone 15 Pro,portrait
+IMG_0124.HEIC,photo,2026-05-24T03:23:03.251000+00:00,google_photos_api,Sunday,May,21,3am,night,Apple,iPhone 15 Pro,landscape
+IMG_8470.HEIC,photo,2026-02-13T20:25:35.910000+00:00,google_photos_api,Friday,February,7,8pm,evening,Apple,iPhone 15 Pro,portrait
+IMG_0537.HEIC,photo,2026-06-20T19:46:55.971000+00:00,google_photos_api,Saturday,June,25,7pm,evening,Apple,iPhone 15 Pro,portrait
+IMG_0679.HEIC,photo,2026-06-28T02:39:51.299000+00:00,google_photos_api,Sunday,June,26,2am,night,Apple,iPhone 15 Pro,landscape
+IMG_0109.HEIC,photo,2026-05-23T05:59:18.520000+00:00,google_photos_api,Saturday,May,21,5am,night,Apple,iPhone 15 Pro,portrait
+IMG_6339.mov,video,2025-11-15T23:41:17+00:00,google_photos_api,Saturday,November,46,11pm,night,N/A,N/A,N/A
+27b5ffd9-9187-4034-b002-cac7ee11f408.jpg,photo,2026-06-27T06:52:17+00:00,google_photos_api,Saturday,June,26,6am,morning,N/A,N/A,landscape
+IMG_8943.HEIC,photo,2026-03-01T00:22:25.652000+00:00,google_photos_api,Sunday,March,9,12am,night,Apple,iPhone 15 Pro,portrait
+IMG_6333.jpeg,photo,2025-11-14T06:36:56.030000+00:00,google_photos_api,Friday,November,46,6am,morning,Apple,iPhone 15 Pro,landscape
+IMG_0550.HEIC,photo,2026-06-21T23:01:21.190000+00:00,google_photos_api,Sunday,June,25,11pm,night,Apple,iPhone 15 Pro,landscape
+IMG_8508.HEIC,photo,2026-02-14T18:56:12.444000+00:00,google_photos_api,Saturday,February,7,6pm,evening,Apple,iPhone 15 Pro,portrait
+IMG_8535.HEIC,photo,2026-02-14T20:33:54.687000+00:00,google_photos_api,Saturday,February,7,8pm,evening,Apple,iPhone 15 Pro,portrait
+IMG_0225.HEIC,photo,2026-05-31T21:37:41.194000+00:00,google_photos_api,Sunday,May,22,9pm,night,Apple,iPhone 15 Pro,portrait
+IMG_8530.MOV,video,2026-02-14T20:18:32+00:00,google_photos_api,Saturday,February,7,8pm,evening,N/A,N/A,N/A
+IMG_0218.HEIC,photo,2026-05-31T21:36:01.355000+00:00,google_photos_api,Sunday,May,22,9pm,night,Apple,iPhone 15 Pro,portrait
+IMG_0201.HEIC,photo,2026-05-31T05:53:14.687000+00:00,google_photos_api,Sunday,May,22,5am,night,Apple,iPhone 15 Pro,portrait
+IMG_0211.HEIC,photo,2026-05-31T21:34:24.621000+00:00,google_photos_api,Sunday,May,22,9pm,night,Apple,iPhone 15 Pro,portrait
+IMG_8911.MOV,video,2026-02-28T19:37:03+00:00,google_photos_api,Saturday,February,9,7pm,evening,N/A,N/A,N/A
+6a870a0f-6d07-4a2c-a9e3-a9d7991e0de2.jpg,photo,2026-06-07T03:05:38+00:00,google_photos_api,Sunday,June,23,3am,night,N/A,N/A,portrait
+IMG_8531.HEIC,photo,2026-02-14T20:25:42.609000+00:00,google_photos_api,Saturday,February,7,8pm,evening,Apple,iPhone 15 Pro,portrait
+IMG_5198.jpeg,photo,2025-11-27T23:51:17.532000+00:00,google_photos_api,Thursday,November,48,11pm,night,Apple,iPhone 13 Pro Max,landscape
+IMG_9998.HEIC,photo,2026-05-11T02:56:47.653000+00:00,google_photos_api,Monday,May,20,2am,night,Apple,iPhone 15 Pro,portrait
+IMG_8934.MOV,video,2026-03-01T00:09:47+00:00,google_photos_api,Sunday,March,9,12am,night,N/A,N/A,N/A
+IMG_0229.HEIC,photo,2026-05-31T21:38:43.067000+00:00,google_photos_api,Sunday,May,22,9pm,night,Apple,iPhone 15 Pro,portrait
+IMG_0307.HEIC,photo,2026-06-07T04:51:56.897000+00:00,google_photos_api,Sunday,June,23,4am,night,Apple,iPhone 15 Pro,portrait
+9d5dbc3f-be94-4ef6-bfc6-5ed20578cbbd.jpeg,photo,2025-08-18T00:33:24+00:00,google_photos_api,Monday,August,34,12am,night,N/A,N/A,landscape
+IMG_6340.mov,video,2025-11-15T23:41:42+00:00,google_photos_api,Saturday,November,46,11pm,night,N/A,N/A,N/A
+IMG_8926.MOV,video,2026-02-28T23:10:42+00:00,google_photos_api,Saturday,February,9,11pm,night,N/A,N/A,N/A
+IMG_0680.HEIC,photo,2026-06-28T02:39:52.064000+00:00,google_photos_api,Sunday,June,26,2am,night,Apple,iPhone 15 Pro,landscape
+IMG_0676.HEIC,photo,2026-06-28T00:29:28.403000+00:00,google_photos_api,Sunday,June,26,12am,night,Apple,iPhone 15 Pro,landscape
+IMG_8910.MOV,video,2026-02-28T19:36:32+00:00,google_photos_api,Saturday,February,9,7pm,evening,N/A,N/A,N/A
+IMG_9999.HEIC,photo,2026-05-11T03:12:21.718000+00:00,google_photos_api,Monday,May,20,3am,night,Apple,iPhone 15 Pro,landscape
+IMG_8921.MOV,video,2026-02-28T23:01:18+00:00,google_photos_api,Saturday,February,9,11pm,night,N/A,N/A,N/A
+8482c177-b037-4aeb-9444-dc23ae097ef1.jpg,photo,2026-07-06T06:36:04+00:00,google_photos_api,Monday,July,28,6am,morning,N/A,N/A,portrait
+ab73d76e-7c21-4718-a066-68a564cdd049.jpg,photo,2026-06-27T06:52:09+00:00,google_photos_api,Saturday,June,26,6am,morning,N/A,N/A,landscape
+IMG_0126.HEIC,photo,2026-05-24T22:28:42.908000+00:00,google_photos_api,Sunday,May,21,10pm,night,Apple,iPhone 15 Pro,landscape
+IMG_8529.MOV,video,2026-02-14T20:16:26+00:00,google_photos_api,Saturday,February,7,8pm,evening,N/A,N/A,N/A
+IMG_6563.jpeg,photo,2025-11-27T20:29:44.972000+00:00,google_photos_api,Thursday,November,48,8pm,evening,Apple,iPhone 15 Pro,landscape
+IMG_0216.HEIC,photo,2026-05-31T21:35:37.095000+00:00,google_photos_api,Sunday,May,22,9pm,night,Apple,iPhone 15 Pro,portrait
+IMG_8527.JPG,photo,2026-02-14T20:05:23.869000+00:00,google_photos_api,Saturday,February,7,8pm,evening,Apple,iPhone 15 Pro,portrait
+IMG_0106.HEIC,photo,2026-05-23T05:11:42.011000+00:00,google_photos_api,Saturday,May,21,5am,night,Apple,iPhone 15 Pro,portrait
+IMG_0210.HEIC,photo,2026-05-31T21:34:19.434000+00:00,google_photos_api,Sunday,May,22,9pm,night,Apple,iPhone 15 Pro,portrait
+IMG_0213.HEIC,photo,2026-05-31T21:34:58.347000+00:00,google_photos_api,Sunday,May,22,9pm,night,Apple,iPhone 15 Pro,portrait
+IMG_0220.HEIC,photo,2026-05-31T21:36:25.521000+00:00,google_photos_api,Sunday,May,22,9pm,night,Apple,iPhone 15 Pro,portrait
+IMG_8930.MOV,video,2026-03-01T00:05:17+00:00,google_photos_api,Sunday,March,9,12am,night,N/A,N/A,N/A
+IMG_9539.MOV,video,2026-04-04T04:37:28+00:00,google_photos_api,Saturday,April,14,4am,night,N/A,N/A,N/A
+IMG_0187.HEIC,photo,2026-05-30T05:32:00.121000+00:00,google_photos_api,Saturday,May,22,5am,night,Apple,iPhone 15 Pro,landscape
+IMG_0541.HEIC,photo,2026-06-21T01:33:41.054000+00:00,google_photos_api,Sunday,June,25,1am,night,Apple,iPhone 15 Pro,portrait
+IMG_0544.HEIC,photo,2026-06-21T21:20:19.588000+00:00,google_photos_api,Sunday,June,25,9pm,night,Apple,iPhone 15 Pro,portrait
+IMG_0549.HEIC,photo,2026-06-21T23:00:59.740000+00:00,google_photos_api,Sunday,June,25,11pm,night,Apple,iPhone 15 Pro,portrait
+IMG_8516.HEIC,photo,2026-02-14T19:21:08.704000+00:00,google_photos_api,Saturday,February,7,7pm,evening,Apple,iPhone 15 Pro,portrait
+fb80ad89-cc8c-4d3d-bae3-34c9896e6d9d.jpeg,photo,2025-08-18T00:20:45+00:00,google_photos_api,Monday,August,34,12am,night,N/A,N/A,portrait
+AE63D736-2E00-4C35-A2E0-6BF0745847E7.jpg,photo,2026-07-06T06:31:13.555000+00:00,google_photos_api,Monday,July,28,6am,morning,Apple,iPhone 15 Pro,landscape
+1d16ca8f-015b-4f07-8fc2-8410f118bdef.jpg,photo,2026-05-19T04:36:07+00:00,google_photos_api,Tuesday,May,21,4am,night,N/A,N/A,portrait
+IMG_8945.HEIC,photo,2026-03-01T00:22:27.271000+00:00,google_photos_api,Sunday,March,9,12am,night,Apple,iPhone 15 Pro,portrait
+IMG_8927.MOV,video,2026-03-01T00:01:48+00:00,google_photos_api,Sunday,March,9,12am,night,N/A,N/A,N/A
+IMG_0677.HEIC,photo,2026-06-28T00:29:29.523000+00:00,google_photos_api,Sunday,June,26,12am,night,Apple,iPhone 15 Pro,landscape
+IMG_0127.HEIC,photo,2026-05-24T22:36:08.438000+00:00,google_photos_api,Sunday,May,21,10pm,night,Apple,iPhone 15 Pro,portrait
+IMG_0125.HEIC,photo,2026-05-24T21:57:29.937000+00:00,google_photos_api,Sunday,May,21,9pm,night,Apple,iPhone 15 Pro,portrait
+IMG_9996.HEIC,photo,2026-05-11T02:10:20.568000+00:00,google_photos_api,Monday,May,20,2am,night,Apple,iPhone 15 Pro,portrait
+IMG_8532.HEIC,photo,2026-02-14T20:33:41.522000+00:00,google_photos_api,Saturday,February,7,8pm,evening,Apple,iPhone 15 Pro,portrait
+IMG_6644.jpeg,photo,2025-12-06T05:55:06.585000+00:00,google_photos_api,Saturday,December,49,5am,night,Apple,iPhone 15 Pro,landscape
+IMG_8512.HEIC,photo,2026-02-14T19:12:46.825000+00:00,google_photos_api,Saturday,February,7,7pm,evening,Apple,iPhone 15 Pro,landscape
+CA6BE7AD-282B-4A80-9949-5B9660D8432D.jpg,photo,2026-06-07T03:04:58.917000+00:00,google_photos_api,Sunday,June,23,3am,night,Apple,iPhone 15 Pro,landscape
+IMG_8925.MOV,video,2026-02-28T23:05:39+00:00,google_photos_api,Saturday,February,9,11pm,night,N/A,N/A,N/A
+9aa01595-3df6-4957-85a4-01abd68e379a.jpg,photo,2026-06-27T06:52:09+00:00,google_photos_api,Saturday,June,26,6am,morning,N/A,N/A,landscape
+IMG_0223.HEIC,photo,2026-05-31T21:37:19.116000+00:00,google_photos_api,Sunday,May,22,9pm,night,Apple,iPhone 15 Pro,portrait
+f681e093-acb3-4ba1-a0cb-b417b0c85554.jpg,photo,2026-07-15T16:36:53+00:00,google_photos_api,Wednesday,July,29,4pm,late afternoon,N/A,N/A,portrait
+IMG_8485.HEIC,photo,2026-02-14T16:21:11.414000+00:00,google_photos_api,Saturday,February,7,4pm,late afternoon,Apple,iPhone 15 Pro,portrait
+530BDA05-501E-4C54-AA6C-FFA55DF39503.jpg,photo,2026-05-19T04:31:57.704000+00:00,google_photos_api,Tuesday,May,21,4am,night,Apple,iPhone 15 Pro,landscape
+IMG_8928.MOV,video,2026-03-01T00:02:32+00:00,google_photos_api,Sunday,March,9,12am,night,N/A,N/A,N/A
+IMG_0212.HEIC,photo,2026-05-31T21:34:48.565000+00:00,google_photos_api,Sunday,May,22,9pm,night,Apple,iPhone 15 Pro,portrait
+IMG_1388.jpeg,photo,2025-11-27T23:40:14.649000+00:00,google_photos_api,Thursday,November,48,11pm,night,Apple,iPhone 16e,portrait
+d23be71b-f54e-4ab3-8347-81d2df84540d.jpg,photo,2026-06-27T15:08:49+00:00,google_photos_api,Saturday,June,26,3pm,late afternoon,N/A,N/A,landscape
+IMG_8472.HEIC,photo,2026-02-13T20:41:42.517000+00:00,google_photos_api,Friday,February,7,8pm,evening,Apple,iPhone 15 Pro,landscape
+IMG_8476.MOV,video,2026-02-13T22:04:29+00:00,google_photos_api,Friday,February,7,10pm,night,N/A,N/A,N/A
+IMG_6319.jpeg,photo,2025-11-13T04:46:27.076000+00:00,google_photos_api,Thursday,November,46,4am,night,Apple,iPhone 15 Pro,landscape
+50638ea5-f11f-4542-9e78-abc7b4c454a1.jpg,photo,2026-06-27T06:52:08+00:00,google_photos_api,Saturday,June,26,6am,morning,N/A,N/A,landscape
+IMG_0128.HEIC,photo,2026-05-24T23:04:24.115000+00:00,google_photos_api,Sunday,May,21,11pm,night,Apple,iPhone 15 Pro,landscape
+IMG_6643.jpeg,photo,2025-12-06T05:55:01.606000+00:00,google_photos_api,Saturday,December,49,5am,night,Apple,iPhone 15 Pro,landscape
+IMG_8929.MOV,video,2026-03-01T00:04:28+00:00,google_photos_api,Sunday,March,9,12am,night,N/A,N/A,N/A
+IMG_0538.HEIC,photo,2026-06-21T01:33:35.985000+00:00,google_photos_api,Sunday,June,25,1am,night,Apple,iPhone 15 Pro,portrait
+IMG_8465.HEIC,photo,2026-02-13T20:14:43.192000+00:00,google_photos_api,Friday,February,7,8pm,evening,Apple,iPhone 15 Pro,portrait
+IMG_0221.HEIC,photo,2026-05-31T21:36:37.417000+00:00,google_photos_api,Sunday,May,22,9pm,night,Apple,iPhone 15 Pro,portrait
+91a0b73d-be06-41bf-b7bb-8cda98c1fd15.jpg,photo,2026-06-27T06:52:09+00:00,google_photos_api,Saturday,June,26,6am,morning,N/A,N/A,landscape
+IMG_0103.HEIC,photo,2026-05-22T22:34:32.154000+00:00,google_photos_api,Friday,May,21,10pm,night,Apple,iPhone 15 Pro,portrait
+IMG_0306.HEIC,photo,2026-06-07T04:51:49.770000+00:00,google_photos_api,Sunday,June,23,4am,night,Apple,iPhone 15 Pro,landscape
+IMG_0305.HEIC,photo,2026-06-07T04:51:48.629000+00:00,google_photos_api,Sunday,June,23,4am,night,Apple,iPhone 15 Pro,landscape
+3CC08B6C-9FD3-46BA-9989-70E0CE06C7C1.jpg,photo,2026-06-07T03:05:22.908000+00:00,google_photos_api,Sunday,June,23,3am,night,Apple,iPhone 15 Pro,landscape
+IMG_0217.HEIC,photo,2026-05-31T21:35:55.028000+00:00,google_photos_api,Sunday,May,22,9pm,night,Apple,iPhone 15 Pro,portrait
+IMG_0219.HEIC,photo,2026-05-31T21:36:09.231000+00:00,google_photos_api,Sunday,May,22,9pm,night,Apple,iPhone 15 Pro,portrait
+IMG_8480.HEIC,photo,2026-02-14T15:52:46.558000+00:00,google_photos_api,Saturday,February,7,3pm,late afternoon,Apple,iPhone 15 Pro,landscape
+IMG_8924.MOV,video,2026-02-28T23:04:28+00:00,google_photos_api,Saturday,February,9,11pm,night,N/A,N/A,N/A
+IMG_0545.HEIC,photo,2026-06-21T22:00:59.064000+00:00,google_photos_api,Sunday,June,25,10pm,night,Apple,iPhone 15 Pro,portrait
+d00e6660-6f39-4e42-9180-bfe9a7948039.jpeg,photo,2025-08-18T00:33:24+00:00,google_photos_api,Monday,August,34,12am,night,N/A,N/A,portrait
+IMG_0547.HEIC,photo,2026-06-21T22:55:30.451000+00:00,google_photos_api,Sunday,June,25,10pm,night,Apple,iPhone 15 Pro,landscape
+IMG_0304.HEIC,photo,2026-06-07T04:51:46.349000+00:00,google_photos_api,Sunday,June,23,4am,night,Apple,iPhone 15 Pro,portrait
+IMG_0104.HEIC,photo,2026-05-22T23:20:55.349000+00:00,google_photos_api,Friday,May,21,11pm,night,Apple,iPhone 15 Pro,landscape
+IMG_8481.HEIC,photo,2026-02-14T16:08:18.099000+00:00,google_photos_api,Saturday,February,7,4pm,late afternoon,Apple,iPhone 15 Pro,portrait
+IMG_0226.HEIC,photo,2026-05-31T21:37:57.864000+00:00,google_photos_api,Sunday,May,22,9pm,night,Apple,iPhone 15 Pro,portrait
+IMG_8903.HEIC,photo,2026-02-27T23:42:25.354000+00:00,google_photos_api,Friday,February,9,11pm,night,Apple,iPhone 15 Pro,portrait
+IMG_0681.HEIC,photo,2026-06-28T03:04:39.356000+00:00,google_photos_api,Sunday,June,26,3am,night,Apple,iPhone 15 Pro,landscape
+IMG_8490.HEIC,photo,2026-02-14T16:25:21.579000+00:00,google_photos_api,Saturday,February,7,4pm,late afternoon,Apple,iPhone 15 Pro,portrait
+IMG_9538.MOV,video,2026-04-04T04:34:05+00:00,google_photos_api,Saturday,April,14,4am,night,N/A,N/A,N/A
+IMG_6335.jpeg,photo,2025-11-14T17:43:25.930000+00:00,google_photos_api,Friday,November,46,5pm,late afternoon,Apple,iPhone 15 Pro,landscape
+IMG_0230.HEIC,photo,2026-05-31T21:39:02.579000+00:00,google_photos_api,Sunday,May,22,9pm,night,Apple,iPhone 15 Pro,portrait
+IMG_8920.MOV,video,2026-02-28T23:00:22+00:00,google_photos_api,Saturday,February,9,11pm,night,N/A,N/A,N/A
+IMG_8536.HEIC,photo,2026-02-14T20:46:58.274000+00:00,google_photos_api,Saturday,February,7,8pm,evening,Apple,iPhone 15 Pro,portrait
+IMG_0227.HEIC,photo,2026-05-31T21:38:21.437000+00:00,google_photos_api,Sunday,May,22,9pm,night,Apple,iPhone 15 Pro,portrait
+IMG_8507.HEIC,photo,2026-02-14T18:39:55.295000+00:00,google_photos_api,Saturday,February,7,6pm,evening,Apple,iPhone 15 Pro,portrait
+IMG_6645.jpeg,photo,2025-12-06T05:55:11.973000+00:00,google_photos_api,Saturday,December,49,5am,night,Apple,iPhone 15 Pro,landscape
+IMG_8923.MOV,video,2026-02-28T23:03:39+00:00,google_photos_api,Saturday,February,9,11pm,night,N/A,N/A,N/A
+IMG_0682.HEIC,photo,2026-06-28T03:54:52.249000+00:00,google_photos_api,Sunday,June,26,3am,night,Apple,iPhone 15 Pro,landscape
+IMG_0678.HEIC,photo,2026-06-28T02:39:50.339000+00:00,google_photos_api,Sunday,June,26,2am,night,Apple,iPhone 15 Pro,landscape
+IMG_0228.HEIC,photo,2026-05-31T21:38:31.434000+00:00,google_photos_api,Sunday,May,22,9pm,night,Apple,iPhone 15 Pro,portrait
+IMG_0303.HEIC,photo,2026-06-07T04:51:44.646000+00:00,google_photos_api,Sunday,June,23,4am,night,Apple,iPhone 15 Pro,portrait
+IMG_8542.HEIC,photo,2026-02-14T23:25:22.667000+00:00,google_photos_api,Saturday,February,7,11pm,night,Apple,iPhone 15 Pro,portrait
+IMG_8484.HEIC,photo,2026-02-14T16:12:47.276000+00:00,google_photos_api,Saturday,February,7,4pm,late afternoon,Apple,iPhone 15 Pro,portrait
+IMG_8492.HEIC,photo,2026-02-14T16:27:21.835000+00:00,google_photos_api,Saturday,February,7,4pm,late afternoon,Apple,iPhone 15 Pro,portrait
+IMG_8539.HEIC,photo,2026-02-14T21:00:42.903000+00:00,google_photos_api,Saturday,February,7,9pm,night,Apple,iPhone 15 Pro,portrait
+IMG_6321.jpeg,photo,2025-11-13T04:46:32.584000+00:00,google_photos_api,Thursday,November,46,4am,night,Apple,iPhone 15 Pro,landscape
+IMG_0546.HEIC,photo,2026-06-21T22:53:36.708000+00:00,google_photos_api,Sunday,June,25,10pm,night,Apple,iPhone 15 Pro,landscape
+IMG_0046.HEIC,photo,2026-05-16T03:46:48.900000+00:00,google_photos_api,Saturday,May,20,3am,night,Apple,iPhone 15 Pro,portrait
+IMG_0542.HEIC,photo,2026-06-21T01:33:43.775000+00:00,google_photos_api,Sunday,June,25,1am,night,Apple,iPhone 15 Pro,portrait
+IMG_0536.HEIC,photo,2026-06-20T19:46:53.458000+00:00,google_photos_api,Saturday,June,25,7pm,evening,Apple,iPhone 15 Pro,portrait
+IMG_0308.HEIC,photo,2026-06-07T04:51:57.810000+00:00,google_photos_api,Sunday,June,23,4am,night,Apple,iPhone 15 Pro,portrait
+IMG_8541.HEIC,photo,2026-02-14T21:47:46.559000+00:00,google_photos_api,Saturday,February,7,9pm,night,Apple,iPhone 15 Pro,portrait
+IMG_0170.HEIC,photo,2026-05-29T15:54:31.018000+00:00,google_photos_api,Friday,May,22,3pm,late afternoon,Apple,iPhone 15 Pro,portrait
+IMG_8510.HEIC,photo,2026-02-14T19:12:41.780000+00:00,google_photos_api,Saturday,February,7,7pm,evening,Apple,iPhone 15 Pro,landscape
+IMG_8491.HEIC,photo,2026-02-14T16:27:20.804000+00:00,google_photos_api,Saturday,February,7,4pm,late afternoon,Apple,iPhone 15 Pro,portrait
+IMG_0197.HEIC,photo,2026-05-30T22:32:12.201000+00:00,google_photos_api,Saturday,May,22,10pm,night,Apple,iPhone 15 Pro,portrait
+IMG_8913.HEIC,photo,2026-02-28T21:57:26.892000+00:00,google_photos_api,Saturday,February,9,9pm,night,Apple,iPhone 15 Pro,portrait
+IMG_8908.HEIC,photo,2026-02-28T17:04:51.892000+00:00,google_photos_api,Saturday,February,9,5pm,late afternoon,Apple,iPhone 15 Pro,landscape
+IMG_8519.HEIC,photo,2026-02-14T19:23:04.089000+00:00,google_photos_api,Saturday,February,7,7pm,evening,Apple,iPhone 15 Pro,portrait
+IMG_0224.HEIC,photo,2026-05-31T21:37:31.617000+00:00,google_photos_api,Sunday,May,22,9pm,night,Apple,iPhone 15 Pro,portrait
+IMG_8540.MOV,video,2026-02-14T21:00:44+00:00,google_photos_api,Saturday,February,7,9pm,night,N/A,N/A,N/A
