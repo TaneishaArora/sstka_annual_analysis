@@ -36,7 +36,6 @@ PROJECT_ROOT = SCRIPT_DIR.parent.parent
 CREDENTIALS_DIR = SCRIPT_DIR / "credentials"
 CACHE_DIR = SCRIPT_DIR / "cache"
 LOGS_DIR = SCRIPT_DIR / "logs"
-DEFAULT_OUTPUT = PROJECT_ROOT / "datasets" / "metadata.csv"
 
 SCOPES = ["https://www.googleapis.com/auth/photospicker.mediaitems.readonly"]
 PICKER_API_BASE = "https://photospicker.googleapis.com/v1"
@@ -170,14 +169,17 @@ def delete_picker_session(creds, session_id: str) -> None:
         logger.warning("Failed to clean up picker session %s: %s", session_id, e)
 
 
-def fetch_picker_index(use_cache: bool) -> dict:
+def fetch_picker_index(use_cache: bool, year: int) -> dict:
     """Runs a Google Photos Picker session and returns a dict keyed by filename.
 
     This always requires a human to open pickerUri in a browser and select
     photos/videos for this run -- it is not a one-time setup step, it happens on
     every invocation (unless --use-cache reuses a prior run's results).
+
+    The cache is per-year so that running a later year's extraction doesn't
+    overwrite an earlier year's cached selection.
     """
-    cache_path = CACHE_DIR / "photos_api_cache.json"
+    cache_path = CACHE_DIR / f"year_{year}" / "photos_api_cache.json"
     if use_cache and cache_path.exists():
         logger.info("Using cached Picker API index at %s", cache_path)
         return json.loads(cache_path.read_text())
@@ -443,7 +445,8 @@ def main():
         description="Extract Google Photos + EXIF metadata for the files selected in a Picker session."
     )
     parser.add_argument("--folder", required=True, help="Local folder path or gs:// bucket prefix")
-    parser.add_argument("--output", default=str(DEFAULT_OUTPUT), help="Output CSV path")
+    parser.add_argument("--year", type=int, required=True, help="Year number for this batch (e.g. 1) -- determines the datasets/year_N/ output folder and picker cache location, unless --output overrides it")
+    parser.add_argument("--output", default=None, help="Output CSV path (default: datasets/year_<year>/metadata.csv)")
     parser.add_argument("--limit", type=int, default=None, help="Only process the first N picked items (for testing)")
     parser.add_argument(
         "--use-cache", action="store_true", help="Reuse the cached Picker API result instead of running a new picker session"
@@ -461,7 +464,7 @@ def main():
 
     setup_logging()
 
-    output_path = Path(args.output)
+    output_path = Path(args.output) if args.output else PROJECT_ROOT / "datasets" / f"year_{args.year}" / "metadata.csv"
     output_path.parent.mkdir(parents=True, exist_ok=True)
     rows = []
 
@@ -485,7 +488,7 @@ def main():
         # The dataset is driven entirely by what was picked -- a row exists if and only if
         # its filename was selected in the Picker session, regardless of what else is in --folder.
         try:
-            photos_index = fetch_picker_index(args.use_cache)
+            photos_index = fetch_picker_index(args.use_cache, args.year)
         except Exception as e:
             logger.error("Could not complete Picker API session: %s", e)
             print(f"ERROR: Picker API session failed ({e}); no selection to build a dataset from.", file=sys.stderr)

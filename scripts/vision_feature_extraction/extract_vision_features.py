@@ -30,8 +30,6 @@ from common import basename, list_media_files, media_type_for, read_bytes  # noq
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
 LOGS_DIR = SCRIPT_DIR / "logs"
-DEFAULT_OUTPUT = PROJECT_ROOT / "datasets" / "vision_features.csv"
-DEFAULT_METADATA_CSV = PROJECT_ROOT / "datasets" / "metadata.csv"
 
 VISION_API_URL = "https://vision.googleapis.com/v1/images:annotate"
 
@@ -158,11 +156,12 @@ def main():
         description="Extract Google Cloud Vision features for the photos listed in metadata.csv."
     )
     parser.add_argument("--folder", required=True, help="Local folder path or gs:// bucket prefix")
-    parser.add_argument("--output", default=str(DEFAULT_OUTPUT), help="Output CSV path")
+    parser.add_argument("--year", type=int, required=True, help="Year number for this batch (e.g. 1) -- determines datasets/year_N/ paths for --output and --metadata-csv defaults")
+    parser.add_argument("--output", default=None, help="Output CSV path (default: datasets/year_<year>/vision_features.csv)")
     parser.add_argument(
         "--metadata-csv",
-        default=str(DEFAULT_METADATA_CSV),
-        help="metadata.csv to read the photo filename list from (keeps this dataset aligned with that one)",
+        default=None,
+        help="metadata.csv to read the photo filename list from (default: datasets/year_<year>/metadata.csv)",
     )
     parser.add_argument("--limit", type=int, default=None, help="Only process the first N photos (for testing)")
     args = parser.parse_args()
@@ -174,7 +173,8 @@ def main():
         print("ERROR: GOOGLE_PHOTO_DATA_API_KEY environment variable is not set.", file=sys.stderr)
         sys.exit(1)
 
-    metadata_csv_path = Path(args.metadata_csv)
+    year_dir = PROJECT_ROOT / "datasets" / f"year_{args.year}"
+    metadata_csv_path = Path(args.metadata_csv) if args.metadata_csv else year_dir / "metadata.csv"
     if not metadata_csv_path.exists():
         print(f"ERROR: {metadata_csv_path} not found. Run extract_metadata.py first.", file=sys.stderr)
         sys.exit(1)
@@ -185,7 +185,7 @@ def main():
 
     local_by_name = {basename(p): p for p in list_media_files(args.folder) if media_type_for(basename(p)) == "photo"}
 
-    output_path = Path(args.output)
+    output_path = Path(args.output) if args.output else year_dir / "vision_features.csv"
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     rows = []
