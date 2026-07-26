@@ -1,10 +1,12 @@
 # Extraction Scripts
 
 Two independent scripts turn a folder of photos/videos into analysis-ready CSVs, keyed
-on `filename`. Joining them into one table is left for the analysis phase.
+on `filename`. Joining them into one table is left for the analysis phase. Both scripts
+take a required `--year N`, writing into `datasets/year_N/` by default -- this repo holds
+one such folder per year of photos (see `datasets/README.md` for the schema).
 
-- `metadata_extraction/extract_metadata.py` -> `datasets/metadata.csv`
-- `vision_feature_extraction/extract_vision_features.py` -> `datasets/vision_features.csv`
+- `metadata_extraction/extract_metadata.py` -> `datasets/year_N/metadata.csv`
+- `vision_feature_extraction/extract_vision_features.py` -> `datasets/year_N/vision_features.csv`
 
 ## Prerequisites
 
@@ -62,25 +64,32 @@ categories like "setting" or "mood"; that grouping is left for the analysis phas
 ## Usage
 
 ```bash
-# Metadata: date, camera, orientation, calendar fields
-python scripts/metadata_extraction/extract_metadata.py --folder pics/year1/
+# Metadata: date, camera, orientation, calendar fields -> datasets/year_1/metadata.csv
+python scripts/metadata_extraction/extract_metadata.py --folder raw_data/pics/year1/ --year 1
 
 # Vision: labels+scores, face count, per-face emotions, text detection, dominant colors
-python scripts/vision_feature_extraction/extract_vision_features.py --folder pics/year1/
+# -> datasets/year_1/vision_features.csv (reads photo filenames from that year's metadata.csv)
+python scripts/vision_feature_extraction/extract_vision_features.py --folder raw_data/pics/year1/ --year 1
 ```
 
 Both accept:
 - `--folder` — a local directory or a `gs://bucket/prefix` GCS path
-- `--output` — output CSV path (defaults into `datasets/`)
+- `--year` — required; determines the `datasets/year_N/` output folder (and, for
+  `extract_metadata.py`, the Picker API cache location) unless overridden below
+- `--output` — output CSV path (default: `datasets/year_<year>/<script's file>.csv`)
 - `--limit N` — process only the first N files, useful for a quick test run before
   committing to the full batch
 
 `extract_metadata.py` additionally accepts:
-- `--use-cache` — reuse the previous run's Picker API result instead of opening a new
+- `--use-cache` — reuse that year's cached Picker API result instead of opening a new
   picker session (skips the browser step entirely; still picker-driven inclusion)
 - `--skip-photos-api` — local-only testing mode: bypass the Picker API and process
   *every* file in `--folder` using EXIF/filename metadata only. This is not subject to
   the "rows == picker selection" guarantee since there's no picker selection in this mode.
+
+`extract_vision_features.py` additionally accepts:
+- `--metadata-csv` — which metadata.csv to read the photo filename list from (default:
+  `datasets/year_<year>/metadata.csv`)
 
 ## Logs
 
