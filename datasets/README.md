@@ -1,9 +1,10 @@
 # Datasets
 
-Extraction outputs, one subfolder per year of photos. Each year's folder holds two CSVs
-produced independently by the scripts in `scripts/` (see `scripts/README.md`), joined on
-`filename` — joining them into a single table is left for the exploratory analysis phase,
-not done here.
+Extraction outputs, one subfolder per year of photos. Each year's folder holds three CSVs
+produced independently by the scripts in `scripts/` (see `scripts/README.md`):
+`metadata.csv` and `vision_features.csv` join on `filename`; `steps.csv` is daily and
+joins on the date portion of `metadata.csv`'s `date_taken`. Joining them into a single
+table is left for the exploratory analysis phase, not done here.
 
 ## `year_1/`
 
@@ -60,3 +61,23 @@ Separately, 2 rows (`IMG_8492.HEIC`, `IMG_8491.HEIC`) have real face/emotion/col
 data but no labels (`label_1`..`label_15` all `N/A`) — Vision's label detection returned
 nothing for these specific images. That's a genuine Vision API result, not a missing-file
 or extraction problem like the 4 above.
+
+### `steps.csv` (1,461 rows)
+
+One row per calendar date, covering every date in the calendar years that appear in
+`metadata.csv`'s `date_taken` (here: 2023–2026) — not just dates that have a photo.
+Sourced from a one-time Google Fit Takeout export (`raw_data/gfit/`), not a live API.
+
+| Column | Description |
+|---|---|
+| `date` | UTC calendar date (`YYYY-MM-DD`) |
+| `day_of_week`, `month`, `week_of_year` | Derived from `date`, same conventions as `metadata.csv` |
+| `total_steps` | Sum of the five bucket columns below |
+| `steps_morning` / `steps_early_afternoon` / `steps_late_afternoon` / `steps_evening` / `steps_night` | Step counts in each time-of-day bucket, using the same hour boundaries as `metadata.csv`'s `time_of_day_category`. Each 15-minute Fit interval is converted from its recorded local time + UTC offset to UTC before bucketing, so these align with `metadata.csv`'s UTC-based buckets rather than local wall-clock time. |
+
+**164 rows have `N/A` in every column except the calendar-derived ones**: `2026-07-21`
+through `2026-12-31`, since the Fit export was taken on 2026-07-26 and only has data
+through `2026-07-19`. (`2026-07-20` isn't `N/A` — it has partial real step data from the
+UTC-shift of `2026-07-19`'s late-night local readings.) These aren't a data-quality
+issue — just dates not yet reached when the export was made — and will need a fresh
+export to fill in as the year progresses.
