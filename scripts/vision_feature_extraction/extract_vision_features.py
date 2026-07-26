@@ -1,0 +1,199 @@
+#!/usr/bin/env python3
+"""Extract Google Cloud Vision labels/faces/text/colors for photos in a folder.
+
+The set of photos processed is read from metadata.csv (--metadata-csv), not by
+walking --folder directly -- this keeps vision_features.csv aligned with
+metadata.csv's picker-driven selection instead of silently including local
+photos that were never part of that selection. Videos are skipped entirely (no
+rows written). HEIC images are converted to JPEG in memory first, since Cloud
+Vision does not accept HEIC directly. See scripts/README.md for setup and usage.
+"""
+
+import argparse
+import base64
+import csv
+import io
+import logging
+import os
+import sys
+from pathlib import Path
+
+import pillow_heif
+from PIL import Image
+
+pillow_heif.register_heif_opener()
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from common import basename, list_media_files, media_type_for, read_bytes  # noqa: E402
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
+LOGS_DIR = SCRIPT_DIR / "logs"
+DEFAULT_OUTPUT = PROJECT_ROOT / "datasets" / "vision_features.csv"
+DEFAULT_METADATA_CSV = PROJECT_ROOT / "datasets" / "metadata.csv"
+
+VISION_API_URL = "https://vision.googleapis.com/v1/images:annotate"
+
+MAX_LABELS = 15  # matches the LABEL_DETECTION maxResults requested below
+
+# Raw data only -- no derived/heuristic columns (setting, occasion_type, mood). Those are
+# left for the exploratory analysis phase, done from these raw labels/scores/emotions.
+CSV_COLUMNS = ["filename"]
+for _i in range(1, MAX_LABELS + 1):
+    CSV_COLUMNS += [f"label_{_i}", f"label_{_i}_score"]
+CSV_COLUMNS += ["people_count", "emotions", "dominant_colors", "contains_text"]
+
+# Vision's four per-face emotion likelihood fields (there are other non-emotion
+# likelihoods too, e.g. blurredLikelihood, headwearLikelihood -- excluded here).
+EMOTION_FIELDS = ["joyLikelihood", "sorrowLikelihood", "angerLikelihood", "surpriseLikelihood"]
+
+logger = logging.getLogger("extract_vision_features")
+
+
+def setup_logging():
+    LOGS_DIR.mkdir(parents=True, exist_ok=True)
+    logging.basicConfig(
+        filename=str(LOGS_DIR / "extract.log"),
+        level=logging.INFO,
+        format="%(asctime)s %(levelname)s %(message)s",
+    )
+
+
+def ensure_supported_format(fname: str, image_bytes: bytes) -> bytes:
+    if Path(fname).suffix.lower() != ".heic":
+        return image_bytes
+    img = Image.open(io.BytesIO(image_bytes)).convert("RGB")
+    buf = io.BytesIO()
+    img.save(buf, format="JPEG")
+    return buf.getvalue()
+
+
+def rgb_to_hex(color: dict) -> str:
+    r = int(color.get("red", 0))
+    g = int(color.get("green", 0))
+    b = int(color.get("blue", 0))
+    return f"#{r:02x}{g:02x}{b:02x}"
+
+
+def analyze_image(image_bytes: bytes, api_key: str) -> dict:
+    import requests
+
+    b64 = base64.b64encode(image_bytes).decode("utf-8")
+    body = {
+        "requests": [
+            {
+                "image": {"content": b64},
+                "features": [
+                    {"type": "LABEL_DETECTION", "maxResults": 15},
+                    {"type": "FACE_DETECTION", "maxResults": 20},
+                    {"type": "TEXT_DETECTION", "maxResults": 1},
+                    {"type": "IMAGE_PROPERTIES"},
+                ],
+            }
+        ]
+    }
+    resp = requests.post(f"{VISION_API_URL}?key={api_key}", json=body, timeout=60)
+    resp.raise_for_status()
+    return resp.json()["responses"][0]
+
+
+def extract_columns_from_response(resp: dict) -> dict:
+    row = {}
+
+    labels = resp.get("labelAnnotations", [])
+    for i in range(MAX_LABELS):
+        n = i + 1
+        if i < len(labels):
+            row[f"label_{n}"] = labels[i].get("description", "N/A")
+            row[f"label_{n}_score"] = round(labels[i].get("score", 0), 4)
+        else:
+            row[f"label_{n}"] = "N/A"
+            row[f"label_{n}_score"] = "N/A"
+
+    faces = resp.get("faceAnnotations", [])
+    row["people_count"] = len(faces)
+    row["emotions"] = (
+        "; ".join(",".join(f"{field[:-len('Likelihood')]}={face.get(field, 'UNKNOWN')}" for field in EMOTION_FIELDS) for face in faces)
+        if faces
+        else "N/A"
+    )
+
+    row["contains_text"] = bool(resp.get("textAnnotations"))
+
+    colors = resp.get("imagePropertiesAnnotation", {}).get("dominantColors", {}).get("colors", [])
+    top_colors = sorted(colors, key=lambda c: c.get("score", 0), reverse=True)[:3]
+    row["dominant_colors"] = ",".join(rgb_to_hex(c["color"]) for c in top_colors) if top_colors else "N/A"
+
+    return row
+
+
+def read_photo_filenames_from_metadata(metadata_csv_path: Path) -> list:
+    with open(metadata_csv_path, newline="") as f:
+        rows = list(csv.DictReader(f))
+    return [r["filename"] for r in rows if r.get("media_type") == "photo"]
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Extract Google Cloud Vision features for the photos listed in metadata.csv."
+    )
+    parser.add_argument("--folder", required=True, help="Local folder path or gs:// bucket prefix")
+    parser.add_argument("--output", default=str(DEFAULT_OUTPUT), help="Output CSV path")
+    parser.add_argument(
+        "--metadata-csv",
+        default=str(DEFAULT_METADATA_CSV),
+        help="metadata.csv to read the photo filename list from (keeps this dataset aligned with that one)",
+    )
+    parser.add_argument("--limit", type=int, default=None, help="Only process the first N photos (for testing)")
+    args = parser.parse_args()
+
+    setup_logging()
+
+    api_key = os.environ.get("GOOGLE_PHOTO_DATA_API_KEY")
+    if not api_key:
+        print("ERROR: GOOGLE_PHOTO_DATA_API_KEY environment variable is not set.", file=sys.stderr)
+        sys.exit(1)
+
+    metadata_csv_path = Path(args.metadata_csv)
+    if not metadata_csv_path.exists():
+        print(f"ERROR: {metadata_csv_path} not found. Run extract_metadata.py first.", file=sys.stderr)
+        sys.exit(1)
+
+    photo_filenames = read_photo_filenames_from_metadata(metadata_csv_path)
+    if args.limit:
+        photo_filenames = photo_filenames[: args.limit]
+
+    local_by_name = {basename(p): p for p in list_media_files(args.folder) if media_type_for(basename(p)) == "photo"}
+
+    output_path = Path(args.output)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    rows = []
+    for fname in photo_filenames:
+        local_path = local_by_name.get(fname)
+        if local_path is None:
+            logger.warning("%s is in metadata.csv but has no local file in %s; writing N/A row", fname, args.folder)
+            row = {col: "N/A" for col in CSV_COLUMNS}
+            row["filename"] = fname
+            rows.append(row)
+            continue
+        try:
+            image_bytes = ensure_supported_format(fname, read_bytes(local_path))
+            resp = analyze_image(image_bytes, api_key)
+            row = {"filename": fname, **extract_columns_from_response(resp)}
+        except Exception as e:
+            logger.error("Failed to analyze %s: %s", local_path, e)
+            row = {col: "N/A" for col in CSV_COLUMNS}
+            row["filename"] = fname
+        rows.append(row)
+
+    with open(output_path, "w", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=CSV_COLUMNS)
+        writer.writeheader()
+        writer.writerows(rows)
+
+    print(f"Wrote {len(rows)} rows to {output_path}")
+
+
+if __name__ == "__main__":
+    main()

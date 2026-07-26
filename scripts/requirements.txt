@@ -1,0 +1,6 @@
+google-auth
+google-auth-oauthlib
+google-cloud-storage
+requests
+Pillow
+pillow-heif
