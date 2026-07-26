@@ -5,8 +5,8 @@ The set of photos processed is read from metadata.csv (--metadata-csv), not by
 walking --folder directly -- this keeps vision_features.csv aligned with
 metadata.csv's picker-driven selection instead of silently including local
 photos that were never part of that selection. Videos are skipped entirely (no
-rows written). HEIC images are converted to JPEG in memory first, since Cloud
-Vision does not accept HEIC directly. See scripts/README.md for setup and usage.
+rows written). Images are converted to JPEG and downscaled before upload (see
+prepare_image_for_upload). See scripts/README.md for setup and usage.
 """
 
 import argparse
@@ -16,6 +16,7 @@ import io
 import logging
 import os
 import sys
+import time
 from pathlib import Path
 
 import pillow_heif
@@ -59,12 +60,23 @@ def setup_logging():
     )
 
 
-def ensure_supported_format(fname: str, image_bytes: bytes) -> bytes:
-    if Path(fname).suffix.lower() != ".heic":
+MAX_UPLOAD_DIMENSION = 2048  # generous for label/face/text detection accuracy
+
+
+def prepare_image_for_upload(fname: str, image_bytes: bytes) -> bytes:
+    """Converts HEIC to JPEG (Vision doesn't accept HEIC) and downscales anything
+    larger than MAX_UPLOAD_DIMENSION on its longest side. Multi-MB originals showed
+    a much higher rate of intermittent connection failures against the Vision API
+    during testing; shrinking the payload avoids that as well as speeding uploads."""
+    img = Image.open(io.BytesIO(image_bytes))
+    if img.format == "JPEG" and max(img.size) <= MAX_UPLOAD_DIMENSION:
         return image_bytes
-    img = Image.open(io.BytesIO(image_bytes)).convert("RGB")
+
+    img = img.convert("RGB")
+    if max(img.size) > MAX_UPLOAD_DIMENSION:
+        img.thumbnail((MAX_UPLOAD_DIMENSION, MAX_UPLOAD_DIMENSION), Image.Resampling.LANCZOS)
     buf = io.BytesIO()
-    img.save(buf, format="JPEG")
+    img.save(buf, format="JPEG", quality=90)
     return buf.getvalue()
 
 
@@ -75,7 +87,7 @@ def rgb_to_hex(color: dict) -> str:
     return f"#{r:02x}{g:02x}{b:02x}"
 
 
-def analyze_image(image_bytes: bytes, api_key: str) -> dict:
+def analyze_image(image_bytes: bytes, api_key: str, max_attempts: int = 4) -> dict:
     import requests
 
     b64 = base64.b64encode(image_bytes).decode("utf-8")
@@ -92,9 +104,17 @@ def analyze_image(image_bytes: bytes, api_key: str) -> dict:
             }
         ]
     }
-    resp = requests.post(f"{VISION_API_URL}?key={api_key}", json=body, timeout=60)
-    resp.raise_for_status()
-    return resp.json()["responses"][0]
+    # Transient connection errors (observed: intermittent SSL errors against this API)
+    # are retried with backoff; a real HTTP error response still raises after retries.
+    for attempt in range(max_attempts):
+        try:
+            resp = requests.post(f"{VISION_API_URL}?key={api_key}", json=body, timeout=60)
+            resp.raise_for_status()
+            return resp.json()["responses"][0]
+        except requests.exceptions.RequestException:
+            if attempt == max_attempts - 1:
+                raise
+            time.sleep(2**attempt)
 
 
 def extract_columns_from_response(resp: dict) -> dict:
@@ -178,7 +198,7 @@ def main():
             rows.append(row)
             continue
         try:
-            image_bytes = ensure_supported_format(fname, read_bytes(local_path))
+            image_bytes = prepare_image_for_upload(fname, read_bytes(local_path))
             resp = analyze_image(image_bytes, api_key)
             row = {"filename": fname, **extract_columns_from_response(resp)}
         except Exception as e:
