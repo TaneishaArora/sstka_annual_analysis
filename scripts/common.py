@@ -48,3 +48,31 @@ def read_bytes(path: str) -> bytes:
 
 def basename(path: str) -> str:
     return path.rsplit("/", 1)[-1] if is_gcs_path(path) else Path(path).name
+
+
+def calendar_fields(d) -> tuple:
+    """Returns (day_of_week, month, week_of_year) for a date or datetime, e.g.
+    ('Monday', 'March', 12). Shared so metadata.csv and steps.csv derive these
+    identically."""
+    return d.strftime("%A"), d.strftime("%B"), d.isocalendar()[1]
+
+
+def time_of_day_category(hour: int) -> str:
+    """Categorizes an hour (0-23) into the buckets shared by metadata.csv's
+    time_of_day_category and steps.csv's per-bucket step columns."""
+    if 6 <= hour < 12:
+        return "morning"
+    if 12 <= hour < 15:
+        return "early afternoon"
+    if 15 <= hour < 18:
+        return "late afternoon"
+    if 18 <= hour < 21:
+        return "evening"
+    return "night"
+
+
+def time_of_day_label(hour: int) -> str:
+    """Formats an hour (0-23) as a 12-hour label, e.g. 15 -> '3pm'."""
+    period = "am" if hour < 12 else "pm"
+    hour_12 = hour % 12 or 12
+    return f"{hour_12}{period}"

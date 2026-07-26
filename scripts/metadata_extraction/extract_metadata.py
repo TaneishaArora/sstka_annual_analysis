@@ -29,7 +29,15 @@ import pillow_heif
 pillow_heif.register_heif_opener()
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from common import basename, list_media_files, media_type_for, read_bytes  # noqa: E402
+from common import (  # noqa: E402
+    basename,
+    calendar_fields,
+    list_media_files,
+    media_type_for,
+    read_bytes,
+    time_of_day_category,
+    time_of_day_label,
+)
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
@@ -303,26 +311,9 @@ def derive_orientation(width, height, exif_orientation):
 
 
 def derive_time_columns(dt: datetime):
-    day_of_week = dt.strftime("%A")
-    month = dt.strftime("%B")
-    week_of_year = dt.isocalendar()[1]
-
-    hour = dt.hour
-    period = "am" if hour < 12 else "pm"
-    hour_12 = hour % 12 or 12
-    time_of_day = f"{hour_12}{period}"
-
-    if 6 <= hour < 12:
-        category = "morning"
-    elif 12 <= hour < 15:
-        category = "early afternoon"
-    elif 15 <= hour < 18:
-        category = "late afternoon"
-    elif 18 <= hour < 21:
-        category = "evening"
-    else:
-        category = "night"
-
+    day_of_week, month, week_of_year = calendar_fields(dt)
+    time_of_day = time_of_day_label(dt.hour)
+    category = time_of_day_category(dt.hour)
     return day_of_week, month, week_of_year, time_of_day, category
 
 

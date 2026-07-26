@@ -21,6 +21,9 @@ import logging
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from common import calendar_fields, time_of_day_category  # noqa: E402
+
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = SCRIPT_DIR.parent.parent
 LOGS_DIR = SCRIPT_DIR / "logs"
@@ -65,15 +68,7 @@ def years_from_metadata(metadata_csv_path: Path) -> list:
 
 
 def bucket_for_utc_hour(hour: int) -> str:
-    if hour >= 21 or hour < 6:
-        return "steps_night"
-    if hour < 12:
-        return "steps_morning"
-    if hour < 15:
-        return "steps_early_afternoon"
-    if hour < 18:
-        return "steps_late_afternoon"
-    return "steps_evening"
+    return "steps_" + time_of_day_category(hour).replace(" ", "_")
 
 
 def daterange(start: datetime.date, end: datetime.date):
@@ -162,11 +157,12 @@ def main():
     rows = []
     for d in output_dates:
         date_str = d.isoformat()
+        day_of_week, month, week_of_year = calendar_fields(d)
         row = {
             "date": date_str,
-            "day_of_week": d.strftime("%A"),
-            "month": d.strftime("%B"),
-            "week_of_year": d.isocalendar()[1],
+            "day_of_week": day_of_week,
+            "month": month,
+            "week_of_year": week_of_year,
         }
         buckets = utc_days.get(date_str)
         if buckets is None:
