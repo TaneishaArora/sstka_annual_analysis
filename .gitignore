@@ -4,5 +4,6 @@ scripts/metadata_extraction/credentials/
 scripts/metadata_extraction/cache/
 scripts/metadata_extraction/logs/
 scripts/vision_feature_extraction/logs/
+scripts/gfit_extraction/logs/
 /.venv/
 __pycache__/

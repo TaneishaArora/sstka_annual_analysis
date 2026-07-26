@@ -1,12 +1,14 @@
 # Extraction Scripts
 
-Two independent scripts turn a folder of photos/videos into analysis-ready CSVs, keyed
-on `filename`. Joining them into one table is left for the analysis phase. Both scripts
-take a required `--year N`, writing into `datasets/year_N/` by default -- this repo holds
-one such folder per year of photos (see `datasets/README.md` for the schema).
+Three independent scripts produce the analysis-ready CSVs in `datasets/year_N/`, keyed
+on `filename` (photos/videos) or `date` (steps). Joining them into one table is left for
+the analysis phase. All three take a required `--year N`, writing into `datasets/year_N/`
+by default -- this repo holds one such folder per year of photos (see `datasets/README.md`
+for the schema).
 
 - `metadata_extraction/extract_metadata.py` -> `datasets/year_N/metadata.csv`
 - `vision_feature_extraction/extract_vision_features.py` -> `datasets/year_N/vision_features.csv`
+- `gfit_extraction/extract_steps.py` -> `datasets/year_N/steps.csv`
 
 ## Prerequisites
 
@@ -61,6 +63,18 @@ categories like "setting" or "mood"; that grouping is left for the analysis phas
    export GOOGLE_PHOTO_DATA_API_KEY=your_key_here
    ```
 
+### 3. Google Fit Takeout export
+
+Required by `extract_steps.py` to get step counts. Unlike the two APIs above, this is a
+one-time manual export, not something the script fetches itself:
+
+1. Go to [Google Takeout](https://takeout.google.com), select **Fit**, and request an
+   export including the **Daily activity metrics** data (per-day CSVs with 15-minute
+   step-count intervals, plus a summary CSV).
+2. Unzip it into `raw_data/gfit/` so the script's default `--gfit-dir` -- pointing at
+   `raw_data/gfit/Daily activity metrics/` -- finds it. Use `--gfit-dir` to point
+   elsewhere.
+
 ## Usage
 
 ```bash
@@ -70,6 +84,10 @@ python scripts/metadata_extraction/extract_metadata.py --folder raw_data/pics/ye
 # Vision: labels+scores, face count, per-face emotions, text detection, dominant colors
 # -> datasets/year_1/vision_features.csv (reads photo filenames from that year's metadata.csv)
 python scripts/vision_feature_extraction/extract_vision_features.py --folder raw_data/pics/year1/ --year 1
+
+# Steps: UTC-normalized daily total + time-of-day buckets -> datasets/year_1/steps.csv
+# (scoped to the calendar years covered by that year's metadata.csv, e.g. 2023-2026)
+python scripts/gfit_extraction/extract_steps.py --year 1
 ```
 
 Both accept:
@@ -90,6 +108,22 @@ Both accept:
 `extract_vision_features.py` additionally accepts:
 - `--metadata-csv` — which metadata.csv to read the photo filename list from (default:
   `datasets/year_<year>/metadata.csv`)
+
+`extract_steps.py` differs slightly: `--folder` isn't used (no photos involved). It
+accepts:
+- `--year` — required; determines which `datasets/year_N/metadata.csv` to read the
+  covered calendar years from, and the `datasets/year_N/steps.csv` output path
+- `--metadata-csv` — override for the metadata.csv to read years from
+- `--gfit-dir` — path to the Takeout "Daily activity metrics" folder (default:
+  `raw_data/gfit/Daily activity metrics/`)
+- `--output` — output CSV path (default: `datasets/year_<year>/steps.csv`)
+- `--limit N` — only process the first N output dates, for testing
+
+Every 15-minute interval is converted from its recorded local time + UTC offset to UTC
+before being bucketed, the same rationale as `extract_metadata.py`'s EXIF-to-UTC
+conversion — so `steps.csv`'s day boundaries and time-of-day buckets line up with
+`metadata.csv`'s rather than drifting by a few hours depending on source. `total_steps`
+is always the sum of that date's five bucket columns, not a separately reported figure.
 
 ## Logs
 
